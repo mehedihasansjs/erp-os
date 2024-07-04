@@ -1,3 +1,3 @@
 export class AppConfig {
-    baseUrl!: string;
+  baseUrl!: string;
 }
