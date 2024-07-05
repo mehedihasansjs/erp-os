@@ -1,4 +1,3 @@
 npx --no-install commitlint --edit "$1"
 npx lint-staged
 npm test
-rm .git/COMMIT_EDITMSG
