@@ -4,19 +4,20 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { APP_CONFIG, AppStartupService, LoggerService } from '@core';
+import { APP_CONFIG, AppStartupService, errorInterceptor, LoggerService, ToastService } from '@core';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideHttpClient(
       withInterceptors([
-        // Add your interceptors here
+        errorInterceptor
       ])
     ),
     provideZoneChangeDetection({
       eventCoalescing: true
     }),
     provideRouter(routes),
+    ToastService,
     LoggerService,
     AppStartupService.forRoot({
       configUrl: '/data/config.json',

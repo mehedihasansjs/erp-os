@@ -1,0 +1,23 @@
+<div id="toasts" class="toasts" popover>
+    @for (toast of toasts; track toast.id) {
+    <div class="toast" [attr.data-type]="toast.type">
+        <div class="icon">
+            <i class="fa-solid fa-{{ toast.icon }}"></i>
+        </div>
+
+        <div class="body">
+            <p>{{ toast.message }}</p>
+        </div>
+
+        <div class="toolbar">
+            <button type="button" (click)="copy(toast.message)">
+                <i class="fa-solid fa-copy"></i>
+            </button>
+
+            <button type="button" (click)="toaster.remove(toast.id)">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+    </div>
+    }
+</div>
