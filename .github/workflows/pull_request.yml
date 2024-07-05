@@ -17,17 +17,20 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Lint project
-        run: npm run lint
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Check for conventional commit messages
         uses: wagoid/commitlint-github-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           configFile: './commitlint.config.js'
-
-      - name: Install dependencies
-        run: npm install
+      
+      - name: Lint project
+        run: npm run lint
 
       - name: Build project
         run: npm run build
