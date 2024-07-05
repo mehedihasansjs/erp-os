@@ -7,12 +7,37 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": true,
+          "changeDetection": "OnPush"
+        },
+        "@schematics/angular:directive": {
+          "standalone": true,
+          "flat": true
+        },
+        "@schematics/angular:pipe": {
+          "standalone": true,
+          "flat": true
+        },
+        "@schematics/angular:guard": {
+          "functional": true,
+          "flat": true
+        },
+        "@schematics/angular:interceptor": {
+          "flat": true,
+          "functional": true
+        },
+        "@schematics/angular:resolver": {
+          "flat": true,
+          "functional": true
+        },
+        "@schematics/angular:service": {
+          "flat": true
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -62,6 +87,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "ssl": true,
+            "sslKey": "ssl/server.key",
+            "sslCert": "ssl/server.crt"
+          },
           "configurations": {
             "production": {
               "buildTarget": "erp-os:build:production"
@@ -98,5 +128,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
