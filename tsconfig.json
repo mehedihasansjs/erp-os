@@ -27,6 +27,7 @@
     "paths": {
       "@core": ["src/app/core/index"],
       "@shared": ["src/app/shared/index"],
+      "@layouts": ["src/app/layouts/index"],
     }
   },
   "angularCompilerOptions": {
