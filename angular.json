@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "erp-os": {
+    "xalorith": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,7 +42,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/erp-os",
+            "outputPath": "dist/xalorith",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -94,10 +94,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "erp-os:build:production"
+              "buildTarget": "xalorith:build:production"
             },
             "development": {
-              "buildTarget": "erp-os:build:development"
+              "buildTarget": "xalorith:build:development"
             }
           },
           "defaultConfiguration": "development"
