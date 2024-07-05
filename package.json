@@ -47,10 +47,5 @@
     "prettier-eslint": "^16.3.0",
     "typescript": "~5.4.2",
     "typescript-eslint": "8.0.0-alpha.38"
-  },
-  "lint-staged": {
-    "*.{ts,js}": ["prettier --write", "eslint"],
-    "*.html": ["eslint", "prettier --write"],
-    "*.{css,scss,html,json}": ["prettier --write"]
   }
 }
