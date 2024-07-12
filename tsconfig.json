@@ -28,6 +28,7 @@
       "@core": ["src/app/core/index"],
       "@shared": ["src/app/shared/index"],
       "@layouts": ["src/app/layouts/index"],
+      "@plugins": ["src/app/plugins/index"],
     }
   },
   "angularCompilerOptions": {

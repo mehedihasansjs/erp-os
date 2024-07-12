@@ -4,7 +4,8 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { APP_CONFIG, AppStartupService, errorInterceptor, LoggerService, ToastService } from '@core';
+import { APP_CONFIG, AppStartupService, errorInterceptor, LoggerService } from '@core';
+import { IconService, ThemeService } from '@plugins';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,7 +18,8 @@ export const appConfig: ApplicationConfig = {
       eventCoalescing: true
     }),
     provideRouter(routes),
-    ToastService,
+    ThemeService,
+    IconService,
     LoggerService,
     AppStartupService.forRoot({
       configUrl: '/data/config.json',
