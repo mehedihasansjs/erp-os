@@ -34,7 +34,6 @@ export const appConfig: ApplicationConfig = {
       provide: APP_CONFIG,
       useFactory: (startupService: AppStartupService) => startupService.getAppConfig(),
       deps: [AppStartupService],
-      multi: true,
     },
     Location,
     {

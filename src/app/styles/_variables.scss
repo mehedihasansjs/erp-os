@@ -8,14 +8,20 @@
   --color-negative: #f44336;
   --color-warning: #ff9800;
   --color-info: #2196f3;
+
+  // height
+  --height-toolbar: 3rem;
+  --height-statusbar: 1.5rem;
 }
 
 .dark {
     --color-background: #0f172a;
+    --color-background-dark: #020617;
     --color-text: #f8fafc;
 }
 
 .light {
     --color-background: #f8fafc;
+    --color-background-dark: #e0e6ed;
     --color-text: #020617;
 }
