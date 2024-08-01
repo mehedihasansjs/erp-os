@@ -14,7 +14,7 @@
     "@aitsgenesis/blocks": "^0.0.1",
     "@aitsgenesis/components": "^0.0.1",
     "@aitsgenesis/core": "^0.0.1",
-    "@aitsgenesis/services": "^2.1.3",
+    "@aitsgenesis/services": "^2.3.0",
     "@aitsgenesis/ui": "^0.0.1",
     "@aitsgenesis/utils": "^0.0.1",
     "@angular/animations": "^18.1.3",
